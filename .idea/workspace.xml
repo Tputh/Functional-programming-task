@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc1db572-6896-4d4f-a1de-94c9c6c05dff" name="Changes" comment="Задача на функциональное программирование">
+    <list default="true" id="fc1db572-6896-4d4f-a1de-94c9c6c05dff" name="Changes" comment="Курсовая. Задача на функциональное программирование">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -38,7 +38,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Имя/IdeaProjects/Functional programming task"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -49,7 +50,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1676887572434</updated>
-      <workItem from="1676887575440" duration="14529000" />
+      <workItem from="1676887575440" duration="15273000" />
+      <workItem from="1676985166743" duration="2808000" />
     </task>
     <task id="LOCAL-00001" summary="Задача на функциональное программирование">
       <created>1676888461455</created>
@@ -58,7 +60,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676888461455</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Курсовая. Задача на функциональное программирование">
+      <created>1676905477024</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676905477024</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -77,6 +86,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Задача на функциональное программирование" />
-    <option name="LAST_COMMIT_MESSAGE" value="Задача на функциональное программирование" />
+    <MESSAGE value="Курсовая. Задача на функциональное программирование" />
+    <option name="LAST_COMMIT_MESSAGE" value="Курсовая. Задача на функциональное программирование" />
   </component>
 </project>

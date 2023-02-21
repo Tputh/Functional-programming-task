@@ -3,40 +3,21 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Main {
-    public static void getWordCount(String string){
 
-        Scanner scanner = new Scanner(string);
-        int words = 0;
 
-        while (scanner.hasNextLine()) {
-            words++;
-            String[] array = scanner.nextLine().split(" ");
-            words = words + array.length;
+    public static List<Map.Entry<String, Integer>> getNumberOfIdenticalWords(String string) {
+        Map<String, Integer> stringMap = new TreeMap<>();
+        String[] words = string.split(" ");
+        for (String word : words) {
+            if (!stringMap.containsKey(word)) {
+                stringMap.put(word, 1);
+            } else {
+                stringMap.put(word, stringMap.get(word) +1 );
+            }
         }
-        System.out.println("Количество слов: " + words);
-        scanner.close();
+        return stringMap.entrySet().stream().sorted((o1, o2) -> o2.getValue().compareTo(o1.getValue())).collect(Collectors.toList());
     }
 
-    public static Map<String, Long> getNumberOfIdenticalWords(List<String> stringList) {
-
-        return stringList.stream().collect(Collectors.toMap(Function.identity(), v -> 1L, Long::sum));
-    }
-    public static <K extends Comparable, V> Map<K, V> sortByKeys(Map<K, V> map) {
-
-        List<K> keys = new ArrayList<K>(map.keySet());
-        Collections.sort(keys, Collections.reverseOrder());
-
-        Map<K, V> linkedHashMap = new LinkedHashMap<>();
-
-        ListIterator<K> itr = keys.listIterator();
-        while (itr.hasNext())
-        {
-            K key = itr.next();
-            linkedHashMap.put(key, map.get(key));
-        }
-
-        return linkedHashMap;
-    }
     public static void main(String[] args) {
 
         System.out.println("Задача на функциональное программирование");
@@ -44,22 +25,9 @@ public class Main {
 
         String string = "your app the quick brown fox jumps over the lazy dog";
 
-        List<String> words = new ArrayList<>();
-
-        for (String s : string.split(" ")) {
-            words.add(s.replaceAll("[^a-zA-Zа-яёА-ЯЁ]", "").toLowerCase());
-            Collections.sort(words);
+        System.out.println(getNumberOfIdenticalWords(string).size());
+        for (Map.Entry<String, Integer> numberOfIdenticalWord : getNumberOfIdenticalWords(string)) {
+            System.out.println(numberOfIdenticalWord.getKey() + " " + numberOfIdenticalWord.getValue());
         }
-
-
-        getWordCount(string);
-
-        TreeMap<String, Long> frequency = new TreeMap<>(getNumberOfIdenticalWords(words));
-
-        System.out.println(sortByKeys(frequency));
-
-
-
-
     }
 }
